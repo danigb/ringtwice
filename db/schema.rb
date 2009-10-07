@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091007225609) do
+ActiveRecord::Schema.define(:version => 20091007231636) do
 
   create_table "gateways", :force => true do |t|
     t.string   "name"
@@ -28,6 +28,30 @@ ActiveRecord::Schema.define(:version => 20091007225609) do
   create_table "groups", :force => true do |t|
     t.string   "name"
     t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mails", :force => true do |t|
+    t.string   "state"
+    t.string   "description"
+    t.string   "reference"
+    t.integer  "project_id"
+    t.integer  "group_id"
+    t.integer  "gateway_id"
+    t.integer  "template_id"
+    t.integer  "user_id"
+    t.string   "from"
+    t.string   "cc"
+    t.string   "bcc"
+    t.string   "subject"
+    t.text     "body"
+    t.string   "charset"
+    t.string   "content_type"
+    t.string   "reply_to"
+    t.string   "headers"
+    t.string   "mime_version"
+    t.datetime "last_sent_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

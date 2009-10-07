@@ -1,0 +1,45 @@
+<h1>Listing mails</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Reference</th>
+    <th>Group</th>
+    <th>Gateway</th>
+    <th>Template</th>
+    <th>Body</th>
+    <th>Cc</th>
+    <th>Bcc</th>
+    <th>From</th>
+    <th>Charset</th>
+    <th>Content type</th>
+    <th>Reply to</th>
+    <th>Headers</th>
+    <th>Mime version</th>
+    <th>Subject</th>
+  </tr>
+
+<% mails.each do |mail| %>
+  <tr>
+    <td><%=h mail.description %></td>
+    <td><%=h mail.reference %></td>
+    <td><%=h mail.group %></td>
+    <td><%=h mail.gateway %></td>
+    <td><%=h mail.template %></td>
+    <td><%=h mail.body %></td>
+    <td><%=h mail.cc %></td>
+    <td><%=h mail.bcc %></td>
+    <td><%=h mail.from %></td>
+    <td><%=h mail.charset %></td>
+    <td><%=h mail.content_type %></td>
+    <td><%=h mail.reply_to %></td>
+    <td><%=h mail.headers %></td>
+    <td><%=h mail.mime_version %></td>
+    <td><%=h mail.subject %></td>
+    <td><%= link_to 'Show', mail.path %></td>
+    <td><%= link_to 'Edit', mail.path(:edit) %></td>
+    <td><%= link_to 'Destroy', mail.path, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+

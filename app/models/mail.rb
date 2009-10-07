@@ -1,14 +1,14 @@
-class Group < ActiveRecord::Base
+class Mail < ActiveRecord::Base
+  belongs_to :group
+  belongs_to :gateway
+  belongs_to :template
   belongs_to :project
-  has_many :members
-  has_many :mails
 
-  validates_presence_of :name, :project
+  validates_presence_of :recipients, :user
 
   def to_param
     "#{id}-#{name.parameterize}"
   end
-
 
   def path(action = nil)
     url = []

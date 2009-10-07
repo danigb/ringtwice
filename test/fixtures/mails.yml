@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  description: MyString
+  reference: MyString
+  group: 
+  gateway: 
+  template: 
+  body: MyText
+  cc: MyString
+  bcc: MyString
+  from: MyString
+  charset: MyString
+  content_type: MyString
+  reply_to: MyString
+  headers: MyString
+  mime_version: MyString
+  subject: MyString
+
+two:
+  description: MyString
+  reference: MyString
+  group: 
+  gateway: 
+  template: 
+  body: MyText
+  cc: MyString
+  bcc: MyString
+  from: MyString
+  charset: MyString
+  content_type: MyString
+  reply_to: MyString
+  headers: MyString
+  mime_version: MyString
+  subject: MyString

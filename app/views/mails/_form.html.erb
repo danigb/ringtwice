@@ -1,0 +1,72 @@
+<% form_for(@mail, :url => @mail.path) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :group %>
+    <%= f.collection_select :group, @project.groups, :id, :name %>
+  </p>
+  <p>
+    <%= f.label :cc %>
+    <%= f.text_field :cc %>
+  </p>
+  <p>
+    <%= f.label :bcc %>
+    <%= f.text_field :bcc %>
+  </p>
+  <p>
+    <%= f.label :from %>
+    <%= f.text_field :from %>
+  </p>
+  <p>
+    <%= f.label :subject %>
+    <%= f.text_field :subject %>
+  </p>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.hidden_field :project_id %>
+    <%= f.hidden_field :user_id %>
+    <%= f.submit t(submit_label(@mail)) %><%= link_to t(:cancel), @project %>
+  </p>
+
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :reference %>
+    <%= f.text_field :reference %>
+  </p>
+  <p>
+    <%= f.label :gateway %>
+    <%= f.collection_select :gateway, @project.gateways, :id, :name, :include_blank => true %>
+  </p>
+  <p>
+    <%= f.label :template %>
+    <%= f.collection_select :template, @project.templates, :id, :name, :include_blank => true %>
+  </p>
+
+  <p>
+    <%= f.label :charset %>
+    <%= f.text_field :charset %>
+  </p>
+  <p>
+    <%= f.label :content_type %>
+    <%= f.text_field :content_type %>
+  </p>
+  <p>
+    <%= f.label :reply_to %>
+    <%= f.text_field :reply_to %>
+  </p>
+  <p>
+    <%= f.label :headers %>
+    <%= f.text_field :headers %>
+  </p>
+  <p>
+    <%= f.label :mime_version %>
+    <%= f.text_field :mime_version %>
+  </p>
+
+<% end %>
+
