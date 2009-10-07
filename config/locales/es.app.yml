@@ -40,6 +40,7 @@ es:
       edit_project: "Editar datos del proyecto"
       new_group: "Añadir grupo"
       new_template: "Crear plantilla"
+      new_gateway: "Añadir pasarela"
     new:
       title: "Crear nuevo proyecto"
       submit: "Crear"
@@ -55,6 +56,16 @@ es:
       title: "Añadir una plantilla al proyecto '{{project}}'"
     edit:
       title: "Editando la plantilla '{{template}}'"
+
+  gateways:
+    show:
+      title: "Grupo '{{group}}'"
+      edit_group: "Editar grupo"
+      new_member: "Añadir un miembro a este grupo"
+    new:
+      title: "Añadir una pasarela al proyecto '{{project}}'"
+    edit:
+      title: "Editando datos de la pasarela '{{gateway}}'"
 
   groups:
     show:

@@ -1,0 +1,41 @@
+<% form_for(@gateway, :url => @gateway.path) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :protocol %><br />
+    <%= f.text_field :protocol %>
+  </p>
+  <p>
+    <%= f.label :host %><br />
+    <%= f.text_field :host %>
+  </p>
+  <p>
+    <%= f.label :port %><br />
+    <%= f.text_field :port %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </p>
+  <p>
+    <%= f.label :auth %><br />
+    <%= f.text_field :auth %>
+  </p>
+  <p>
+    <%= f.label :domain %><br />
+    <%= f.text_field :domain %>
+  </p>
+  <p>
+    <%= f.hidden_field :project_id %>
+    <%= f.submit t(submit_label(@gateway)) %><%= link_to t(:cancel), @project %>
+  </p>
+<% end %>
+

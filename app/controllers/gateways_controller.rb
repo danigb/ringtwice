@@ -1,8 +1,8 @@
-class GroupsController < ApplicationController
+class GatewaysController < ApplicationController
   before_filter :require_user
 
   inherit_resources
-  actions :all, :except => :index
+  actions :all, :except => [:index, :show]
   respond_to :html, :xml, :json
   belongs_to :project
 

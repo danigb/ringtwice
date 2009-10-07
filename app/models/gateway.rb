@@ -1,11 +1,8 @@
-class Project < ActiveRecord::Base
-  belongs_to :user
-  has_many :groups
-  has_many :templates
-  has_many :gateways
+class Gateway < ActiveRecord::Base
+  belongs_to :project
 
-  validates_presence_of :name, :user
-  
+  validates_presence_of :name, :protocol
+
   def to_param
     "#{id}-#{name.parameterize}"
   end
@@ -14,6 +11,8 @@ class Project < ActiveRecord::Base
   def path(action = nil)
     url = []
     url << action unless action.nil?
+    url << self.project
     url << self
+    url
   end
 end

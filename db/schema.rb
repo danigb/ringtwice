@@ -9,7 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091007221307) do
+ActiveRecord::Schema.define(:version => 20091007225609) do
+
+  create_table "gateways", :force => true do |t|
+    t.string   "name"
+    t.integer  "project_id"
+    t.string   "protocol"
+    t.string   "host"
+    t.integer  "port"
+    t.string   "user"
+    t.string   "password"
+    t.string   "auth"
+    t.string   "domain"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "groups", :force => true do |t|
     t.string   "name"

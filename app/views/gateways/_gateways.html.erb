@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Protocol</th>
+    <th>Host</th>
+    <th>Port</th>
+    <th>User</th>
+    <th>Password</th>
+    <th>Auth</th>
+    <th>Domain</th>
+  </tr>
+
+<% gateways.each do |gateway| %>
+  <tr>
+    <td><%= link_to gateway.name, gateway.path %></td>
+    <td><%=h gateway.protocol %></td>
+    <td><%=h gateway.host %></td>
+    <td><%=h gateway.port %></td>
+    <td><%=h gateway.user %></td>
+    <td><%=h gateway.password %></td>
+    <td><%=h gateway.auth %></td>
+    <td><%=h gateway.domain %></td>
+    <td><%= link_to 'Edit', gateway.path(:edit) %></td>
+    <td><%= link_to 'Destroy', gateway.path, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+

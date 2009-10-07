@@ -7,19 +7,8 @@ class TemplatesController < ApplicationController
   respond_to :html, :xml, :json
   belongs_to :project
 
-  def create
-    @tmpl = Template.new(params[:template])
-    saved = @tmpl.save
-    respond_to do |format|
-      format.html {saved ? redirect_to(@tmpl.project) : render(:action => 'edit')}
-    end
-  end
 
-  def update
-    @tmpl = Template.find(params[:id])
-    updated = @tmpl.update_attributes(params[:template])
-    respond_to do |format|
-      format.html {updated ? redirect_to(@tmpl.project) : render(:action => 'edit')}
-    end
+  def show
+    redirect_to project_path(params[:project_id])
   end
 end
