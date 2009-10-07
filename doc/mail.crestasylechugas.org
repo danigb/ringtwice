@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+    ServerName mail.crestasyleghugas.org
+    RewriteEngine On
+    DocumentRoot /home/dani/deploy/ringtwice/current/public
+
+    RewriteRule ^/$ /cache/index.html [QSA]
+    RewriteRule ^([^.]+)$ /cache/$1.html [QSA]
+
+    <Directory /home/dani/deploy/ringtwice/current/public>
+         Options FollowSymLinks
+         Allow from all
+         AllowOverride None
+         Order allow,deny
+    </Directory>
+</VirtualHost>
+
