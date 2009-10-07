@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Project</th>
+  </tr>
+
+<% tmpls.each do |tmpl| %>
+  <tr>
+    <td><%= link_to tmpl.name, tmpl.path %></td>
+    <td><%=h tmpl.body %></td>
+    <td><%= link_to 'Edit', tmpl.path(:edit) %></td>
+    <td><%= link_to 'Destroy', tmpl.path, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

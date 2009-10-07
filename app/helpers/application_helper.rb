@@ -14,6 +14,7 @@ module ApplicationHelper
     result << link_to(I18n.t(:all_projects), projects_path)
     if model
       model.path.each do |parent|
+        result << ' '
         result << link_to(parent.name, parent.path)
       end
     end

@@ -39,11 +39,22 @@ es:
       back: "Tus proyectos"
       edit_project: "Editar datos del proyecto"
       new_group: "Añadir grupo"
+      new_template: "Crear plantilla"
     new:
       title: "Crear nuevo proyecto"
       submit: "Crear"
     edit:
       title: "Editando proyecto '{{project}}'"
+
+  templates:
+    show:
+      title: "Plantilla '{{template}}'"
+      edit_group: "Editar grupo"
+      new_member: "Añadir un miembro a este grupo"
+    new:
+      title: "Añadir una plantilla al proyecto '{{project}}'"
+    edit:
+      title: "Editando la plantilla '{{template}}'"
 
   groups:
     show:

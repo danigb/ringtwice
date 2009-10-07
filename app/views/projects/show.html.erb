@@ -4,8 +4,10 @@
 
 <%= link_to t(:edit_project), edit_project_path(@project) %>
 <%= link_to t(:new_group), new_project_group_path(@project) %>
+<%= link_to t(:new_template), new_project_template_path(@project) %>
 
 <%= render '/groups/groups', :object => @project.groups %>
+<%= render '/templates/tmpls', :object => @project.templates %>
 
 
 
