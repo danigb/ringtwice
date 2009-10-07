@@ -1,0 +1,13 @@
+
+es:
+  layouts:
+    app: "Ringtwice"
+
+  user_sessions:
+    new:
+      title: "Entrar"
+      email: "Email"
+      password: "Contraseña"
+      submit: "Entrar"
+
+      
