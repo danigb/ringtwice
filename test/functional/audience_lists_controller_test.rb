@@ -4,7 +4,7 @@ class AudienceListsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:audience_lists)
+    assert_not_nil assigns(:groups)
   end
 
   test "should get new" do
@@ -12,34 +12,34 @@ class AudienceListsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create audience_list" do
+  test "should create group" do
     assert_difference('AudienceList.count') do
-      post :create, :audience_list => { }
+      post :create, :group => { }
     end
 
-    assert_redirected_to audience_list_path(assigns(:audience_list))
+    assert_redirected_to group_path(assigns(:group))
   end
 
-  test "should show audience_list" do
-    get :show, :id => audience_lists(:one).to_param
+  test "should show group" do
+    get :show, :id => groups(:one).to_param
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => audience_lists(:one).to_param
+    get :edit, :id => groups(:one).to_param
     assert_response :success
   end
 
-  test "should update audience_list" do
-    put :update, :id => audience_lists(:one).to_param, :audience_list => { }
-    assert_redirected_to audience_list_path(assigns(:audience_list))
+  test "should update group" do
+    put :update, :id => groups(:one).to_param, :group => { }
+    assert_redirected_to group_path(assigns(:group))
   end
 
-  test "should destroy audience_list" do
+  test "should destroy group" do
     assert_difference('AudienceList.count', -1) do
-      delete :destroy, :id => audience_lists(:one).to_param
+      delete :destroy, :id => groups(:one).to_param
     end
 
-    assert_redirected_to audience_lists_path
+    assert_redirected_to groups_path
   end
 end

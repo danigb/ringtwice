@@ -11,7 +11,7 @@
 
 ActiveRecord::Schema.define(:version => 20091007165231) do
 
-  create_table "audience_lists", :force => true do |t|
+  create_table "groups", :force => true do |t|
     t.string   "name"
     t.integer  "project_id"
     t.datetime "created_at"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20091007165231) do
   create_table "members", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.integer  "audience_list_id"
+    t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

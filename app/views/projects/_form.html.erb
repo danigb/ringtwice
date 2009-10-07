@@ -7,6 +7,6 @@
   </p>
   <p>
     <%= f.hidden_field :user_id %>
-    <%= f.submit t(submit_label(@project)) %>
+    <%= f.submit t(submit_label(@project)) %> <%= link_to t(:cancel), projects_path %>
   </p>
 <% end %>

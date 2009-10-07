@@ -1,3 +1,5 @@
 class Member < ActiveRecord::Base
-  belongs_to :audience_list
+  belongs_to :group
+
+  validates_presence_of :name, :email
 end

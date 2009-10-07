@@ -1,4 +1,4 @@
-<% form_for(@audience_list, :url => project_audience_lists_path(@project)) do |f| %>
+<% form_for(@group, :url => project_groups_path(@project)) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -7,6 +7,6 @@
   </p>
   <p>
     <%= f.hidden_field :project_id %>
-    <%= f.submit t(submit_label(@audience_list)) %>
+    <%= f.submit t(submit_label(@group)) %>
   </p>
 <% end %>

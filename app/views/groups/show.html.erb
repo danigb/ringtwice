@@ -1,0 +1,11 @@
+<div class="breadcrums">
+  <%= link_to t(:all_projects), projects_path %>
+  <%= link_to @project.name, @project %>
+</div>
+
+<%= title t(:title, :group => @group.name) %>
+
+<%= render '/members/members', :object => @group.members %>
+
+<%= link_to t(:edit_group), [:edit, @project, @group] %> |
+<%= link_to t(:new_member), new_project_group_member_path(@project, @group) %>

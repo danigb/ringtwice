@@ -6,9 +6,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :user_sessions
   map.resources :users
-  map.resources :projects do |projects|
-    projects.resources :audience_lists do |audience_list|
-      audience_list.resources :members
+  map.resources(:projects, :as => 'p') do |projects|
+    projects.resources(:groups, :as => 'g') do |group|
+      group.resources :members, :as => 'm'
     end
   end
 end

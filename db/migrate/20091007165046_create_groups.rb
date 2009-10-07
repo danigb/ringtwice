@@ -1,6 +1,6 @@
-class CreateAudienceLists < ActiveRecord::Migration
+class CreateGroups < ActiveRecord::Migration
   def self.up
-    create_table :audience_lists do |t|
+    create_table :groups do |t|
       t.string :name
       t.references :project
 
@@ -9,6 +9,6 @@ class CreateAudienceLists < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :audience_lists
+    drop_table :groups
   end
 end

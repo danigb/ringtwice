@@ -1,10 +1,10 @@
 <%= link_to t(:back), projects_path %>
-<%= title t(:title, :name => @project.name)  %>
+<%= title t(:title, :project => @project.name)  %>
 
-<%= link_to t(:edit), edit_project_path(@project) %>
-<%= link_to t(:new_audience_list), new_project_audience_list_path(@project) %>
+<%= link_to t(:edit_project), edit_project_path(@project) %>
+<%= link_to t(:new_group), new_project_group_path(@project) %>
 
-<%= render '/audience_lists/audience_lists', :object => @project.audience_lists %>
+<%= render '/groups/groups', :object => @project.groups %>
 
 
 

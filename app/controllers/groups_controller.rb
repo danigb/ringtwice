@@ -1,4 +1,4 @@
-class AudienceListsController < ApplicationController
+class GroupsController < ApplicationController
   before_filter :require_user
 
   inherit_resources

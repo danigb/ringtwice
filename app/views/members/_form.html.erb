@@ -1,0 +1,17 @@
+<% form_for(@member, :url => project_group_members_path(@group.project, @group)) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.hidden_field :group_id %>
+    <%= f.submit t(submit_label(@member)) %>
+    <%= link_to t(:cancel), [@group.project, @group] %>
+  </p>
+<% end %>

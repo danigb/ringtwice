@@ -2,6 +2,9 @@
 es:
   update: "Modificar"
   create: "Crear"
+  cancel: "Cancelar"
+
+  all_projects: "Proyectos"
 
   layouts:
     login: "Entrar"
@@ -29,19 +32,28 @@ es:
     name: "Nombre"
     index:
       title: "Tus proyectos"
+      new_project: "Crear proyecto"
     show:
-      title: "Proyecto: '{{project}}'"
+      title: "Proyecto '{{project}}'"
       back: "Tus proyectos"
-      edit: "Editar datos del proyecto"
-      new_audience_list: "Añadir grupo"
+      edit_project: "Editar datos del proyecto"
+      new_group: "Añadir grupo"
     new:
       title: "Crear nuevo proyecto"
       submit: "Crear"
     edit:
       title: "Editando proyecto '{{project}}'"
 
-  audience_lists:
+  groups:
+    show:
+      title: "Grupo '{{group}}'"
+      edit_group: "Editar grupo"
+      new_member: "Añadir un miembro a este grupo"
     new:
       title: "Añadir un grupo al proyecto '{{project}}'"
     edit:
       title: "Editando el grupo '{{group}}'"
+
+  members:
+    new:
+      title: "Añadir un miembro a '{{group}}'"

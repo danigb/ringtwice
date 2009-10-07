@@ -3,7 +3,7 @@ class CreateMembers < ActiveRecord::Migration
     create_table :members do |t|
       t.string :name
       t.string :email
-      t.references :audience_list
+      t.references :group
 
       t.timestamps
     end
