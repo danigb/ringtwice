@@ -1,21 +1,6 @@
-<h1>Listing projects</h1>
+<%= title t(:title) %>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>References</th>
-  </tr>
-
-<% @projects.each do |project| %>
-  <tr>
-    <td><%=h project.title %></td>
-    <td><%=h project.references %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<%= render 'projects', :object => @projects %>
 
 <br />
 

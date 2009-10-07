@@ -1,7 +1,7 @@
 class CreateProjects < ActiveRecord::Migration
   def self.up
     create_table :projects do |t|
-      t.string :title
+      t.string :name
       t.references :user
 
       t.timestamps

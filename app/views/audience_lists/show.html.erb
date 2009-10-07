@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @audience_list.name %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%=h @audience_list.project %>
+</p>
+
+
+<%= link_to 'Edit', edit_audience_list_path(@audience_list) %> |
+<%= link_to 'Back', audience_lists_path %>

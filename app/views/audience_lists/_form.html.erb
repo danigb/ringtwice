@@ -1,0 +1,12 @@
+<% form_for(@audience_list, :url => project_audience_lists_path(@project)) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.hidden_field :project_id %>
+    <%= f.submit t(submit_label(@audience_list)) %>
+  </p>
+<% end %>

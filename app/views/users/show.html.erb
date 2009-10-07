@@ -1,13 +1,4 @@
 <%= title t(:title) %>
 
-<p>
-  <b>Email:</b>
-  <%=h @user.email %>
-</p>
-
-<p>
-  <b>Password:</b>
-  <%=h @user.password %>
-</p>
-
+<%= render '/projects/projects', :object => @user.projects %>
 

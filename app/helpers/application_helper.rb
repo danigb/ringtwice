@@ -5,4 +5,7 @@ module ApplicationHelper
     "<h1>#{label}</h1>"
   end
 
+  def submit_label(model)
+    model.new_record? ? :create : :update
+  end
 end

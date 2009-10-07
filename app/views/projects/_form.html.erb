@@ -1,0 +1,12 @@
+<% form_for(@project) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name, t(:name) %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.hidden_field :user_id %>
+    <%= f.submit t(submit_label(@project)) %>
+  </p>
+<% end %>
