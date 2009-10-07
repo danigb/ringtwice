@@ -1,6 +1,8 @@
 
 es:
   layouts:
+    login: "Entrar"
+    logout: "Salir"
     app: "Ringtwice"
 
   users:

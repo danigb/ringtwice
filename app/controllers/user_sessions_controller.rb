@@ -8,8 +8,10 @@ class UserSessionsController < ApplicationController
       success.html { redirect_to account_path}
     end
   end
-
+  
   def destroy
-    destroy! { login_url }
+    destroy!do |success|
+      success.html { redirect_to root_path}
+    end
   end
 end
