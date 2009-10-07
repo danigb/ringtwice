@@ -4,8 +4,8 @@ class UserSessionsController < ApplicationController
   actions :new, :create, :destroy
 
   def create
-    create! do |format|
-      format.html { redirect_to_stored_or account_path}
+    create! do |success|
+      success.html { redirect_to account_path}
     end
   end
 

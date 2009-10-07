@@ -6,6 +6,12 @@ es:
   users:
     show:
       title: "Tu cuenta"
+    new:
+      title: "Crear un usuario"
+      email: "Email"
+      password: "Contraseña"
+      password_confirmation: "Repite contraseña"
+      submit: "Crear"
 
   user_sessions:
     new:
