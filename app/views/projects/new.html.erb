@@ -1,0 +1,15 @@
+<%= title t(:title) %>
+
+<% form_for(@project) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title, t(:project_title) %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.submit t(:submit) %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', projects_path %>

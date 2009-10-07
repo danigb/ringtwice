@@ -22,4 +22,11 @@ es:
       password: "Contraseña"
       submit: "Entrar"
 
+  projects:
+    show:
+      title: "Proyecto: '{{title}}'"
+    new:
+      title: "Crear nuevo proyecto"
+      project_title: "Título"
+      submit: "Crear"
       

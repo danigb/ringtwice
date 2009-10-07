@@ -22,7 +22,9 @@ module AuthenticationModule
   end
 
   def require_user
-    unless current_user
+    if current_user
+      params[:user_id] = current_user.id
+    else
       store_location
       redirect_to login_path
       return false
