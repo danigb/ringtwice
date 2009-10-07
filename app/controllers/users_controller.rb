@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.xml
   def show
-    @user = (params[:id].blank? || current_user.id != 1) ? current_user : User.find(params[:id])
+    @user = (params[:id].blank? || is_admin?) ? current_user : User.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

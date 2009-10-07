@@ -3,6 +3,10 @@ es:
   layouts:
     app: "Ringtwice"
 
+  users:
+    show:
+      title: "Tu cuenta"
+
   user_sessions:
     new:
       title: "Entrar"

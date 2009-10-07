@@ -6,6 +6,10 @@ module AuthenticationModule
     session[:return_to] = nil
   end
 
+  def is_admin?
+    return current_user && current_user.id == 1
+  end
+
   private
   def current_user_session
     return @current_user_session if defined?@current_user_session

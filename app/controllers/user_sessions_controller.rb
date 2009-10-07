@@ -16,7 +16,7 @@ class UserSessionsController < ApplicationController
     respond_to do |format|
       if @user_session.save
         flash[:notice] = 'UserSession was successfully created.'
-        format.html { redirect_to_stored_or(current_user) }
+        format.html { redirect_to_stored_or account_path }
         format.xml  { render :xml => @user_session, :status => :created, :location => @user_session }
       else
         format.html { render :action => "new" }
