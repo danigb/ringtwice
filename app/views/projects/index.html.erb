@@ -1,6 +1,7 @@
 <%= title t(:title) %>
 
+<%= link_to t(:new_project), new_project_path %>
+
 <%= render 'projects', :object => @projects %>
 
 
-<%= link_to t(:new_project), new_project_path %>

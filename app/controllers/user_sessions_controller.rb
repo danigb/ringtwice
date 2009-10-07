@@ -5,7 +5,7 @@ class UserSessionsController < ApplicationController
 
   def create
     create! do |success|
-      success.html { redirect_to account_path}
+      success.html { redirect_to root_path}
     end
   end
   

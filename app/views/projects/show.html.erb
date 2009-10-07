@@ -1,5 +1,6 @@
-<%= link_to t(:back), projects_path %>
-<%= title t(:title, :project => @project.name)  %>
+<%= breadcrums @project %>
+
+<%= title t(:title, :project => @project.name) %>
 
 <%= link_to t(:edit_project), edit_project_path(@project) %>
 <%= link_to t(:new_group), new_project_group_path(@project) %>

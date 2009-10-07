@@ -27,6 +27,7 @@ es:
       email: "Email"
       password: "Contraseña"
       submit: "Entrar"
+      remember_me: "Recordarme en este ordenador"
 
   projects:
     name: "Nombre"

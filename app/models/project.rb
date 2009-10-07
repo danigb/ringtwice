@@ -7,4 +7,10 @@ class Project < ActiveRecord::Base
   def to_param
     "#{id}-#{name}"
   end
+
+  def path(action = nil)
+    url = []
+    url << action unless action.nil?
+    url << self
+  end
 end

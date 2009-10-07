@@ -1,7 +1,4 @@
-<div class="breadcrums">
-  <%= link_to t(:all_projects), projects_path %>
-  <%= link_to @project.name, @project %>
-</div>
+<%= breadcrums @group %>
 
 <%= title t(:title, :group => @group.name) %>
 

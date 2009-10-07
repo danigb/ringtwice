@@ -1,15 +1,13 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Project</th>
   </tr>
 
 <% groups.each do |group| %>
   <tr>
-    <td><%= link_to group.name, [@project, group] %></td>
-    <td><%=h group.project.name %></td>
-    <td><%= link_to 'Edit', edit_project_group_path(group) %></td>
-    <td><%= link_to 'Destroy', project_groups_path(@project), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to group.name, group.path %></td>
+    <td><%= link_to 'Edit', group.path(:edit) %></td>
+    <td><%= link_to 'Destroy', group.path, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
