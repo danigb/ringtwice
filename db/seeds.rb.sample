@@ -1,2 +1,29 @@
 
+[Gateway, Group, Mail, Member, Project, Template, User].each {|c| c.destroy_all}
 
+u = User.find_or_create_by_email(:email => '@gmail.com', :password => 'entrar', :password_confirmation => 'entrar')
+u.save!
+
+u.projects.build(:name => 'calclab').save!
+u.projects.build(:name => 'crestasylechugas').save!
+
+p = u.projects.build(:name => 'test')
+p.save!
+
+g = p.groups.build(:name => 'me')
+g.save!
+g.members.build(:name => "myself", :email => '@gmail.com').save!
+
+
+g = p.groups.build(:name => 'main')
+g.save!
+[1,2,3].each {|i| g.members.build(:name => "test#{i}", :email => '@gmail.com').save!}
+
+p.gateways.build(:name => 'crestas',
+  :protocol => 'smtp',
+  :host           => "smtp.gmail.com",
+  :port           => 587,
+  :domain         => "crestasylechugas.org",
+  :auth           => 'plain',
+  :user           => "@gmail.com",
+  :password       => "").save!

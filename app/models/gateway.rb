@@ -3,10 +3,17 @@ class Gateway < ActiveRecord::Base
 
   validates_presence_of :name, :protocol
 
+  def smtp_options
+    if protocol == 'smtp'
+      {:host => host, :port => port, :user => user, :password => password, :auth => auth, :domain => domain}
+    else
+      {}
+    end
+  end
+
   def to_param
     "#{id}-#{name.parameterize}"
   end
-
 
   def path(action = nil)
     url = []

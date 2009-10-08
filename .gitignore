@@ -9,5 +9,7 @@ nbproject
 db/data.yml
 backups/*.bz2
 config/git.yml
+db/seeds.rb
+
 
 

@@ -4,11 +4,9 @@ class Mail < ActiveRecord::Base
   belongs_to :template
   belongs_to :project
 
-  validates_presence_of :recipients, :user
+  after_create :send_mail
 
-  def to_param
-    "#{id}-#{name.parameterize}"
-  end
+  validates_presence_of :user_id, :group, :gateway
 
   def path(action = nil)
     url = []
@@ -16,5 +14,16 @@ class Mail < ActiveRecord::Base
     url << self.project
     url << self
     url
+  end
+
+  private
+  def send_mail
+    ee
+  end
+  def ee
+    group.members.each do |member|
+      Pony.mail(:to => member.email,:from => from, :subject => subject, :body => body,
+        :via => gateway.protocol, :smtp => gateway.smtp_options)
+    end
   end
 end

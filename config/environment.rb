@@ -10,4 +10,6 @@ Rails::Initializer.run do |config|
   
   config.time_zone = 'UTC'
   config.i18n.default_locale = :es
+
+  config.load_paths += %W( #{RAILS_ROOT}/lib )
 end

@@ -1,8 +1,8 @@
 <% form_for(@mail, :url => @mail.path) do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :group %>
-    <%= f.collection_select :group, @project.groups, :id, :name %>
+    <%= f.label :group_id %>
+    <%= f.collection_select :group_id, @project.groups, :id, :name %>
   </p>
   <p>
     <%= f.label :cc %>
@@ -39,12 +39,12 @@
     <%= f.text_field :reference %>
   </p>
   <p>
-    <%= f.label :gateway %>
-    <%= f.collection_select :gateway, @project.gateways, :id, :name, :include_blank => true %>
+    <%= f.label :gateway_id %>
+    <%= f.collection_select :gateway_id, @project.gateways, :id, :name %>
   </p>
   <p>
-    <%= f.label :template %>
-    <%= f.collection_select :template, @project.templates, :id, :name, :include_blank => true %>
+    <%= f.label :template_id %>
+    <%= f.collection_select :template_id, @project.templates, :id, :name, :include_blank => true %>
   </p>
 
   <p>
