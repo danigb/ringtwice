@@ -98,7 +98,7 @@ es:
 
   activerecord:
     errors:
-      template:
+      mail_template:
         header:
           one:   "no se pudo guardar este {{model}} porque se encontró 1 error" 
           other:  "no se pudo guardar este {{model}} porque se encontraron {{count}} errores" 

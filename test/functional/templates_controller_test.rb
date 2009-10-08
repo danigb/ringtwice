@@ -4,7 +4,7 @@ class TemplatesControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:templates)
+    assert_not_nil assigns(:mail_templates)
   end
 
   test "should get new" do
@@ -12,34 +12,34 @@ class TemplatesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create template" do
+  test "should create mail_template" do
     assert_difference('Template.count') do
-      post :create, :template => { }
+      post :create, :mail_template => { }
     end
 
-    assert_redirected_to template_path(assigns(:template))
+    assert_redirected_to mail_template_path(assigns(:mail_template))
   end
 
-  test "should show template" do
-    get :show, :id => templates(:one).to_param
+  test "should show mail_template" do
+    get :show, :id => mail_templates(:one).to_param
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => templates(:one).to_param
+    get :edit, :id => mail_templates(:one).to_param
     assert_response :success
   end
 
-  test "should update template" do
-    put :update, :id => templates(:one).to_param, :template => { }
-    assert_redirected_to template_path(assigns(:template))
+  test "should update mail_template" do
+    put :update, :id => mail_templates(:one).to_param, :mail_template => { }
+    assert_redirected_to mail_template_path(assigns(:mail_template))
   end
 
-  test "should destroy template" do
+  test "should destroy mail_template" do
     assert_difference('Template.count', -1) do
-      delete :destroy, :id => templates(:one).to_param
+      delete :destroy, :id => mail_templates(:one).to_param
     end
 
-    assert_redirected_to templates_path
+    assert_redirected_to mail_templates_path
   end
 end

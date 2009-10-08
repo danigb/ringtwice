@@ -7,7 +7,7 @@ class CreateMails < ActiveRecord::Migration
       t.references :project
       t.references :group
       t.references :gateway
-      t.references :template
+      t.references :mail_template
       t.references :user
       t.string :from
       t.string :cc

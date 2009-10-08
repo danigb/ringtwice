@@ -5,13 +5,13 @@
 <div class="actions">
   <%= link_to t(:edit_project), edit_project_path(@project) %>
   <%= link_to t(:new_group), new_project_group_path(@project) %>
-  <%= link_to t(:new_template), new_project_template_path(@project) %>
+  <%= link_to t(:new_mail_template), new_project_mail_template_path(@project) %>
   <%= link_to t(:new_gateway), new_project_gateway_path(@project) %>
   <%= link_to t(:new_mail), new_project_mail_path(@project) %>
 </div>
 
 <%= render '/groups/groups', :object => @project.groups %>
-<%= render '/templates/tmpls', :object => @project.templates %>
+<%= render '/mail_templates/mail_templates', :object => @project.mail_templates %>
 <%= render '/gateways/gateways', :object => @project.gateways %>
 <%= render '/mails/mails', :object => @project.mails %>
 

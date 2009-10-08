@@ -1,0 +1,37 @@
+<% form_for(@mail_template, :url => @mail_template.path) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name, t(:processor) %>
+    <%= f.select :processor, MailTemplate::PROCESSORS %>
+  </p>
+  <p>
+    <%= f.label :name, t(:name) %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :body, t(:body) %>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :reply_to, t(:reply_to) %>
+    <%= f.text_field :reply_to %>
+  </p>
+  <p>
+    <%= f.label :charset, t(:charset) %>
+    <%= f.text_field :charset %>
+  </p>
+  <p>
+    <%= f.label :content_type, t(:content_type) %>
+    <%= f.text_field :content_type %>
+  </p>
+  <p>
+    <%= f.label :mime_version, t(:mime_version) %>
+    <%= f.text_field :mime_version %>
+  </p>
+
+  <p>
+    <%= f.hidden_field :project_id %>
+    <%= f.submit t(submit_label(@mail_template)) %><%= link_to t(:cancel), @project %>
+  </p>
+<% end %>

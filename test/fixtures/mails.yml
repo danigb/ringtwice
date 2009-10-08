@@ -5,7 +5,7 @@ one:
   reference: MyString
   group: 
   gateway: 
-  template: 
+  mail_template: 
   body: MyText
   cc: MyString
   bcc: MyString
@@ -22,7 +22,7 @@ two:
   reference: MyString
   group: 
   gateway: 
-  template: 
+  mail_template: 
   body: MyText
   cc: MyString
   bcc: MyString

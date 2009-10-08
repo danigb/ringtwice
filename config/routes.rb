@@ -11,7 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :user_sessions
   map.resources :users
   map.resources(:projects, :as => 'p') do |projects|
-    projects.resources(:templates, :as => 't')
+    projects.resources(:mail_templates, :as => 't')
     projects.resources :gateways
     projects.resources :mails
     projects.resources(:groups, :as => 'g') do |group|

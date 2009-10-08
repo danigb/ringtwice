@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091007231636) do
+ActiveRecord::Schema.define(:version => 20091008011910) do
 
   create_table "gateways", :force => true do |t|
     t.string   "name"
@@ -32,6 +32,19 @@ ActiveRecord::Schema.define(:version => 20091007231636) do
     t.datetime "updated_at"
   end
 
+  create_table "mail_templates", :force => true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "processor"
+    t.string   "charset"
+    t.string   "content_type"
+    t.string   "reply_to"
+    t.string   "mime_version"
+  end
+
   create_table "mails", :force => true do |t|
     t.string   "state"
     t.string   "description"
@@ -39,7 +52,7 @@ ActiveRecord::Schema.define(:version => 20091007231636) do
     t.integer  "project_id"
     t.integer  "group_id"
     t.integer  "gateway_id"
-    t.integer  "template_id"
+    t.integer  "mail_template_id"
     t.integer  "user_id"
     t.string   "from"
     t.string   "cc"
@@ -67,14 +80,6 @@ ActiveRecord::Schema.define(:version => 20091007231636) do
   create_table "projects", :force => true do |t|
     t.string   "name"
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "templates", :force => true do |t|
-    t.string   "name"
-    t.text     "body"
-    t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

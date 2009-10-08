@@ -1,7 +1,7 @@
 
 
 if RAILS_ENV == 'development'
-  puts "DEBUG TRANSLATION"
+  puts "DEBUG IN TRANSLATION"
   
   require 'yaml'
 
@@ -11,7 +11,7 @@ if RAILS_ENV == 'development'
 
       def translate(key, options = {})
         begin
-          scope = options[:scope] ? options[:scope].join('.') : ''
+          scope = options[:scope] ? (options[:scope].respond_to?(:join) ? options[:scope].join('.') : options[:scope].to_s) : ''
           ActiveRecord::Base.logger.debug "TRANSLATE: #{key} - scope: #{scope}"
         rescue Exception => e
           ActiveRecord::Base.logger.debug "TRANSLATE: #{e.message}"

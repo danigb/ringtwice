@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
   belongs_to :user
   has_many :groups
-  has_many :templates
+  has_many :mail_templates
   has_many :gateways
   has_many :mails
 

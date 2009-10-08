@@ -1,7 +1,7 @@
 class Mail < ActiveRecord::Base
   belongs_to :group
   belongs_to :gateway
-  belongs_to :template
+  belongs_to :mail_template
   belongs_to :project
 
   after_create :send_mail

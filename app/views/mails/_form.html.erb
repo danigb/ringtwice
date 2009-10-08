@@ -43,8 +43,8 @@
     <%= f.collection_select :gateway_id, @project.gateways, :id, :name %>
   </p>
   <p>
-    <%= f.label :template_id %>
-    <%= f.collection_select :template_id, @project.templates, :id, :name, :include_blank => true %>
+    <%= f.label :mail_template_id %>
+    <%= f.collection_select :mail_template_id, @project.mail_templates, :id, :name, :include_blank => true %>
   </p>
 
   <p>

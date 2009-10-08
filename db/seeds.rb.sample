@@ -1,5 +1,5 @@
 
-[Gateway, Group, Mail, Member, Project, Template, User].each {|c| c.destroy_all}
+[Gateway, Group, Mail, Member, Project, MailTemplate, User].each {|c| c.destroy_all}
 
 u = User.find_or_create_by_email(:email => '@gmail.com', :password => 'entrar', :password_confirmation => 'entrar')
 u.save!
