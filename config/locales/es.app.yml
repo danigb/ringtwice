@@ -41,6 +41,7 @@ es:
       new_group: "Añadir grupo"
       new_template: "Crear plantilla"
       new_gateway: "Añadir pasarela"
+      new_mail: "Enviar un mail"
     new:
       title: "Crear nuevo proyecto"
       submit: "Crear"
@@ -48,6 +49,8 @@ es:
       title: "Editando proyecto '{{project}}'"
 
   templates:
+    name: "Nombre"
+    body: "Plantilla"
     show:
       title: "Plantilla '{{template}}'"
       edit_group: "Editar grupo"
@@ -68,6 +71,7 @@ es:
       title: "Editando datos de la pasarela '{{gateway}}'"
 
   groups:
+    name: "Nombre"
     show:
       title: "Grupo '{{group}}'"
       edit_group: "Editar grupo"
@@ -78,5 +82,11 @@ es:
       title: "Editando el grupo '{{group}}'"
 
   members:
+    name: "Nombre"
+    email: "Email"
     new:
       title: "Añadir un miembro a '{{group}}'"
+
+  mails:
+    new:
+      title: "Enviar un mail"

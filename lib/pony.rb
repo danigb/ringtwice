@@ -1,5 +1,4 @@
-# modified version of pony
-# container portions of:
+# modified version of pony container portions of:
 # http://github.com/openrain/action_mailer_tls
 # http://github.com/adamwiggins/pony
 
@@ -19,7 +18,14 @@ Net::SMTP.class_eval do
   private
   def do_start(helodomain, user, secret, authtype)
     raise IOError, 'SMTP session already started' if @started
-    check_auth_args user, secret, authtype if user or secret
+    
+    if RUBY_VERSION == '1.8.6'
+      check_auth_args user, secret, authtype if user or secret
+    elsif RUBY_VERSION == '1.8.7'
+      check_auth_args user, secret if user or secret
+    else
+      raise Exception, 'Ruby version not supported'
+    end
 
     sock = timeout(@open_timeout) { TCPSocket.open(@address, @port) }
     @socket = Net::InternetMessageIO.new(sock)
