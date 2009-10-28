@@ -2,35 +2,35 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :protocol %><br />
-    <%= f.text_field :protocol %>
+    <%= f.label :protocol %>
+    <%= f.select :protocol, [['SMTP', 'smtp']] %>
   </p>
   <p>
-    <%= f.label :host %><br />
+    <%= f.label :host %>
     <%= f.text_field :host %>
   </p>
   <p>
-    <%= f.label :port %><br />
+    <%= f.label :port %>
     <%= f.text_field :port %>
   </p>
   <p>
-    <%= f.label :user %><br />
+    <%= f.label :user %>
     <%= f.text_field :user %>
   </p>
   <p>
-    <%= f.label :password %><br />
+    <%= f.label :password %>
     <%= f.text_field :password %>
   </p>
   <p>
-    <%= f.label :auth %><br />
+    <%= f.label :auth %>
     <%= f.text_field :auth %>
   </p>
   <p>
-    <%= f.label :domain %><br />
+    <%= f.label :domain %>
     <%= f.text_field :domain %>
   </p>
   <p>

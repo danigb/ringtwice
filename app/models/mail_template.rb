@@ -12,10 +12,15 @@ class MailTemplate < ActiveRecord::Base
 
   def render(values = {})
     if processor == 'mustache'
-      Mustache.render(body, values)
+      ctx = values.inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
+      Mustache.render(body, parameters.merge(ctx))
     else
       body
     end
+  end
+
+  def parameters
+    @parameters ||= create_parameters
   end
 
   def to_param
@@ -29,4 +34,27 @@ class MailTemplate < ActiveRecord::Base
     url << self
     url
   end
+
+  private
+  def create_parameters
+    m = Mustache.new
+    def m.context
+      unless @whitehash
+        @whitehash = Hash.new
+
+        def @whitehash.[](name)
+          self[name] = 'generated'
+          ''
+        end
+        #def @whitehash.has_key?(name); true; end
+      end
+      @whitehash
+    end
+
+    m.render(body)
+    @parameters = m.context
+  end
+
 end
+
+

@@ -1,0 +1,60 @@
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.6.0
+*/
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}del,ins{text-decoration:none;}
+
+@banner: #6F6F6F;
+@fondo: #EFEFEA;
+@border: #E2E2DD;
+@oscuro: #6F6F6F;
+@claro: #efefea;
+
+/** LAYOUT **/
+* {margin: 0;}
+html, body { height: 100%; }
+#head {position: fixed; top: 0; width: 100%; height: 2em;}
+#main {min-height: 100%; 
+    height: auto !important;
+    height: 100%;
+    margin: 0em auto -3em;
+}
+#pop {height: 2em;}
+#push {height: -5em; clear: both;}
+#footer {height: 3em;}
+
+/** GENERAL **/
+html {background-color: @fondo;  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
+#head, #footer {background-color: @banner; color: white;}
+.page {width: 60em; margin: 0em auto; background-color: white; padding: 1em;}
+
+.rounded {    -moz-border-radius: 0.5em;  -webkit-border-radius: 0.5em}
+
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+h1 {font-size: 200%; margin-top: 0.5em;}
+
+#footer {text-align: center; }
+
+
+/** ELEMENTS **/
+.breadcrums {width: 100%; overflow: hidden;}
+.breadcrums a {float: left; display: block; padding: 0.25em 0.5em; color: white; margin-right: 1px;
+        background-color: @oscuro; }
+.actions {width: 100%; overflow: hidden; margin-bottom: 1em;}
+.actions a {float: left; display: block; padding: 0.25em 0.5em; color: white; margin-right: 0.25em;
+        background-color: @claro; .rounded;}
+.actions a:hover {background-color: @oscuro; text-decoration: none;}
+
+/** FORMS **/
+form {width: 30em; margin: 1em 15%; padding: 1em;
+        border: 0.5em solid @border; background-color: @fondo;}
+form p {display: block; width: 100%; overflow: hidden; margin: 0.2em 0;}
+form p label {width: 9.5em; float: left; margin-right: 0.5em; text-align: right;}
+form p input[type=submit] {margin-left: 10em; }
+
+/** TABLES **/
+table {width: 100%;}
+thead {background-color: @oscuro; color: white;}

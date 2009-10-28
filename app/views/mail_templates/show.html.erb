@@ -1,3 +1,19 @@
 <%= title t(:title, :mail_template => @mail_template.name) %>
 
-<%= h @mail_template.render %>
+<% div_for @mail_template do %>
+  <h2>Body</h2>
+  <%= h @mail_template.body %>
+
+  <h2>Test</h2>
+  <% form_tag url_for(@mail_template.path), :method => 'get' do %>
+    <% @mail_template.parameters.keys.each do |param| %>
+      <p><label><%= param %></label>
+      <%= text_field_tag "test[#{param}]" %></p>
+    <% end %>
+    <p><%= submit_tag 'Test' %></p>
+  <% end -%>
+
+    <h2>Result</h2>
+    <%= @mail_template.render(@test)  %>
+<% end -%>
+

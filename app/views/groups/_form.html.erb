@@ -2,11 +2,11 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
+    <%= f.hidden_field :project_id %>
+    <%= f.label :name, t(:name) %>
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.hidden_field :project_id %>
     <%= f.submit t(submit_label(@group)) %>
   </p>
 <% end %>
