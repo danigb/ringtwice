@@ -66,6 +66,14 @@ es:
     edit:
       title: "Editando la plantilla '{{mail_template}}'"
 
+  delivers:
+    show:
+      title: "Ver mail con plantilla '{{mail_template}}'"
+      new: "Crear un email"
+    new:
+      title: "Enviar mail con plantilla '{{mail_template}}'"
+      test: "Modo de prueba (no envia email)"
+
   gateways:
     show:
       title: "Grupo '{{group}}'"

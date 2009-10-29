@@ -1,0 +1,9 @@
+<%= breadcrums @deliver %>
+
+<%= title t(:title, :mail_template => @deliver.template.name) %>
+
+<div class="actions">
+  <%= link_to t(:new), new_project_mail_template_deliver_path(@deliver.project, @deliver.template) %>
+</div>
+
+<%= h @deliver.render %>

@@ -1,0 +1,17 @@
+<%= title t(:title, :mail_template => @deliver.template.name) %>
+
+<% div_for @deliver do %>
+
+  <% form_tag(deliver_api_path) do %>
+    <% @deliver.parameters.each do |param| %>
+      <p><label><%= param %></label>
+      <%= text_field_tag "template[#{param}]" %></p>
+    <% end %>
+    <p>
+      <%= hidden_field_tag "template_id", @deliver.template.id %>
+      <%= check_box_tag "options[test_only]", "1", :checked => true %><%= t(:test) %>
+    </p>
+    <p><%= submit_tag 'Create' %></p>
+  <% end -%>
+<% end -%>
+
