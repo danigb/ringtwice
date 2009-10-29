@@ -25,6 +25,15 @@ html, body { height: 100%; }
 #push {height: -5em; clear: both;}
 #footer {height: 3em;}
 
+/** TWO COLUMN **/
+.layout {with: 100%; overflow: hidden;}
+.principal {width: 60%; float: left; overflow: hidden;}
+.extra {width: 30%; margin: 1em 0; float: right; }
+.nice_list {background-color: @fondo; margin: 0 0 1em 0;}
+.nice_list h2 {display: block; padding: 0.2em 1em;
+              background-color: @oscuro; color: white;}
+.nice_list ul {padding: 0.5em 1em 0.5em 1em;}
+
 /** GENERAL **/
 html {background-color: @fondo;  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
 #head, #footer {background-color: @banner; color: white;}
@@ -49,13 +58,14 @@ h1 {font-size: 200%; margin-top: 0.5em;}
 .actions a:hover {background-color: @oscuro; text-decoration: none;}
 
 /** FORMS **/
-form {width: 30em; margin: 1em 15%; padding: 1em;
+form {width: 25em; margin: 1em 15%; padding: 1em;
         border: 0.5em solid @border; background-color: @fondo;}
 form p {display: block; width: 100%; overflow: hidden; margin: 0.5em 0;}
-form p label {width: 9.5em; float: left; margin-right: 0.5em; text-align: right;}
-form p input[type=submit], form p input[type=checkbox] {margin-left: 10em; margin-right: 0.5em;}
+form p label {width: 7.5em; float: left; margin-right: 0.5em; text-align: right;}
+form p input[type=text], form p textarea {width: 16em;}
+form p input[type=submit], form p input[type=checkbox] {margin-left: 8em; margin-right: 0.5em;}
 
 
 /** TABLES **/
-table {width: 100%;}
+table {}
 thead {background-color: @oscuro; color: white;}

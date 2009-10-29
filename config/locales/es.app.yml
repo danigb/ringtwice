@@ -42,6 +42,9 @@ es:
       new_mail_template: "Crear plantilla"
       new_gateway: "Añadir pasarela"
       new_mail: "Enviar un mail"
+      template_list: "Plantillas"
+      group_list: "Grupos"
+      gateway_list: "Pasarelas"
     new:
       title: "Crear nuevo proyecto"
       submit: "Crear"
@@ -81,6 +84,7 @@ es:
       new_member: "Añadir un miembro a este grupo"
     new:
       title: "Añadir una pasarela al proyecto '{{project}}'"
+      use_gmail: "Usar cuenta de gmail"
     edit:
       title: "Editando datos de la pasarela '{{gateway}}'"
 

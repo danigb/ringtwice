@@ -10,10 +10,14 @@
   <%= link_to t(:new_mail), new_project_mail_path(@project) %>
 </div>
 
-<%= render '/groups/groups', :object => @project.groups %>
-<%= render '/mail_templates/mail_templates', :object => @project.mail_templates %>
-<%= render '/gateways/gateways', :object => @project.gateways %>
-<%= render '/mails/mails', :object => @project.mails %>
-
-
+<div class="layout">
+  <div class="principal">
+    <%= render '/mails/mails', :object => @project.mails %>
+  </div>
+  <div class="extra">
+    <%= nice_list(:template_list, @project.mail_templates, :name) %>
+    <%= nice_list(:group_list, @project.groups, :name) %>
+    <%= nice_list(:gateway_list, @project.gateways, :name) %>
+  </div>
+</div>
 

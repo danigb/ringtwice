@@ -1,3 +1,24 @@
+<% content_for :head do %>
+  <script type="text/javascript">
+    $(function() {
+      $("#use_gmail").click(function() {
+        $("#gateway_protocol").val("smtp");
+        $("#gateway_host").val("smtp.gmail.com");
+        $("#gateway_port").val("587");
+        $("#gateway_auth").val("plain");
+        $("#gateway_name").focus();
+        return false;
+      });
+    });
+  </script>
+<% end %>
+
+<%= breadcrums @project %>
+
 <%= title t(:title, :project => @project.name) %>
+
+<div class="actions">
+  <%= link_to t(:use_gmail), '#', :id => 'use_gmail' %>
+</div>
 
 <%= render 'form' %>

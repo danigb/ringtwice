@@ -7,6 +7,6 @@ class GatewaysController < ApplicationController
   belongs_to :project
 
   def show
-    redirect_to project_path(params[:project_id])
+    redirect_to edit_project_gateway_path(params[:project_id], params[:id])
   end
 end
