@@ -10,7 +10,8 @@ class MailTemplate < ActiveRecord::Base
     super(options.merge(DEFAULTS))
   end
 
-  def render(values = {})
+  def render(values)
+    values ||= {}
     if processor == 'mustache'
       ctx = values.inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
       Mustache.render(body, parameters.merge(ctx))
