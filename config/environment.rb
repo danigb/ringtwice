@@ -8,7 +8,7 @@ Rails::Initializer.run do |config|
   config.gem "authlogic"
   config.gem "graysky-translator", :lib => "translator"
   config.gem "josevalim-inherited_resources", :lib => 'inherited_resources'
-  config.gem "mustache"
+#  config.gem "mustache"
   
   config.time_zone = 'UTC'
   config.i18n.default_locale = :es
